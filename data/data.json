@@ -1,0 +1,119 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": 1,
+        "title": "Commutify",
+        "content": "Full-stack ride sharing application built using Flutter.",
+        "imgurl": "/projectSS/commutify.png",
+        "githubLink": "https://github.com/siddharthkanna/Commutify",
+        "deployedLink": "https://github.com/siddharthkanna/Commutify",
+        "tech": [
+          {
+            "id": 11,
+            "tech": "/skillsLogos/flutter.png"
+          },
+          {
+            "id": 12,
+            "tech": "/skillsLogos/dart.png"
+          },
+          {
+            "id": 13,
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+            "id": 14,
+            "tech": "/skillsLogos/mongodb.png"
+          },
+          {
+            "id": 15,
+            "tech": "/skillsLogos/express.png"
+          },
+          {
+            "id": 16,
+            "tech": "/skillsLogos/firebase.png"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Netflix Clone",
+        "content": "Netflix clone was built using React js which is fully responsive. MovieDB Api is used to fetch and display the data. ",
+        "imgurl": "/projectSS/netflix.png",
+        "githubLink": "https://github.com/siddharthkanna/netflix-clone",
+        "deployedLink": "https://netflix-clone-71a66.web.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/css.png"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "SCOPE Club Website",
+        "content": "This is our Technical Club's website, crafted with React.js and featuring captivating animations that elevates user experience.",
+        "imgurl": "/projectSS/scopeclub.png",
+        "githubLink": "https://github.com/scopeclub/scope_website",
+        "deployedLink": "https://scopeclub-6604e.web.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/js.png"
+          },
+          {
+            "tech": "/skillsLogos/css.png"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Portfolio",
+        "content": "Next js was used to create the portfolio website. TailwindCSS and Framer motion were used to style the website.",
+        "imgurl": "/projectSS/portfolio.png",
+        "githubLink": "",
+        "deployedLink": "",
+        "tech": [
+          {
+            "tech": "/skillsLogos/next-js.png"
+          },
+          {
+            "tech": "/skillsLogos/typescript.png"
+          },
+          {
+            "tech": "/skillsLogos/framer.png"
+          },
+          {
+            "tech": "/skillsLogos/tailwind.png"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Covid Tracker",
+        "content": "This website shows the no of covid cases around the world. It is fully responsive and mobile friendly. Disease.sh api was used to fetch the data.",
+        "imgurl": "/projectSS/covidTracker.png",
+        "githubLink": "https://github.com/siddharthkanna/Covid-19-Tracker",
+        "deployedLink": "https://covid-19-tracker-7e954.web.app/",
+        "tech": [
+          {
+            "tech": "/skillsLogos/react.png"
+          },
+          {
+            "tech": "/skillsLogos/css.png"
+          },
+          {
+            "tech": "/skillsLogos/firebase.png"
+          }
+        ]
+      }
+      
+    
+      
+    ]
+  }
+}
