@@ -37,6 +37,40 @@
       },
       {
         "id": 2,
+        "title": "AgriRent",
+        "content": "A Flutter app for farmers to rent and share equipment, with real-time chat and secure Firebase login.",
+        "imgurl": "/projectSS/agrirent.png",
+        "githubLink": "https://github.com/siddharthkanna/AgriRent",
+        "deployedLink": "https://github.com/siddharthkanna/AgriRent",
+        "tech": [
+          {
+            "id": 11,
+            "tech": "/skillsLogos/flutter.png"
+          },
+          {
+            "id": 12,
+            "tech": "/skillsLogos/dart.png"
+          },
+          {
+            "id": 13,
+            "tech": "/skillsLogos/node.png"
+          },
+          {
+            "id": 14,
+            "tech": "/skillsLogos/mongodb.png"
+          },
+          {
+            "id": 15,
+            "tech": "/skillsLogos/express.png"
+          },
+          {
+            "id": 16,
+            "tech": "/skillsLogos/firebase.png"
+          }
+        ]
+      },
+      {
+        "id": 3,
         "title": "Netflix Clone",
         "content": "Netflix clone was built using React js which is fully responsive. MovieDB Api is used to fetch and display the data. ",
         "imgurl": "/projectSS/netflix.png",
@@ -52,7 +86,7 @@
         ]
       },
       {
-        "id": 3,
+        "id": 4,
         "title": "SCOPE Club Website",
         "content": "This is our Technical Club's website, crafted with React.js and featuring captivating animations that elevates user experience.",
         "imgurl": "/projectSS/scopeclub.png",
@@ -71,7 +105,7 @@
         ]
       },
       {
-        "id": 4,
+        "id": 5,
         "title": "Portfolio",
         "content": "Next js was used to create the portfolio website. TailwindCSS and Framer motion were used to style the website.",
         "imgurl": "/projectSS/portfolio.png",
@@ -93,7 +127,7 @@
         ]
       },
       {
-        "id": 5,
+        "id": 6,
         "title": "Covid Tracker",
         "content": "This website shows the no of covid cases around the world. It is fully responsive and mobile friendly. Disease.sh api was used to fetch the data.",
         "imgurl": "/projectSS/covidTracker.png",
