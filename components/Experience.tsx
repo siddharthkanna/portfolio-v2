@@ -31,8 +31,8 @@ export default function Experience({ }: Props) {
           clogo="/companyLogo/sump.jpg"
           title="Software engineer Intern"
           company="Sumpositive services pvt ltd."
-          point1="Organised Several hackathons and coding contests."
-          point2="Developed club's official website."
+          point1="Worked on angular forms"
+          point2="Worked on java Springboot backend"
           startDate="Oct, 2023"
           endDate="feb, 2023"
         />
