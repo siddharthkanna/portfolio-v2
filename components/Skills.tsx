@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import TechStackButton from "./ui/TechStackButton";
-import { IconCloudDemo } from "./ui/IconCloud";
 
 type Props = {};
 
