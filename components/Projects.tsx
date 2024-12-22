@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { motion } from "framer-motion";
 
 type Props = {
   data: Array<any>;
@@ -26,17 +27,31 @@ export default function Projects({ data }: Props) {
   };
 
   return (
-    <div className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-      <h3 className="absolute top-32 uppercase tracking-[20px] text-gray-400 text-2xl">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
+      viewport={{
+        once: false,
+      }}
+      className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    >
+      <h3 className="absolute top-32 sm:top-32 md:top-32 xs:top-24 uppercase tracking-[20px] text-gray-400 text-2xl z-50">
         Projects
       </h3>
 
-      <div className="absolute flex justify-between w-full z-40 pl-4 pr-2 md:max-w-2xl mt-16 md:mt-10 dark:text-white text-gray-800">
+      <div className="absolute flex justify-between w-full z-40 pl-4 pr-2 md:max-w-2xl mt-24 md:mt-20 dark:text-white text-gray-800">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`icon icon-tabler icon-tabler-square-rounded-chevron-left-filled h-8 w-8 md:w-14 md:h-14 cursor-pointer ${
-            indexAt == 0 ? "opacity-20 cursor-not-allowed" : "opacity-100"
-          } `}
+          className={`icon icon-tabler icon-tabler-square-rounded-chevron-left-filled h-8 w-8 md:w-14 md:h-14 cursor-pointer ${indexAt == 0 ? "opacity-20 cursor-not-allowed" : "opacity-100"
+            } `}
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -56,9 +71,8 @@ export default function Projects({ data }: Props) {
         </svg>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`icon icon-tabler icon-tabler-square-rounded-chevron-right-filled h-8 w-8 md:w-14 md:h-14 cursor-pointer ${
-            indexAt == 7 ? "opacity-20 cursor-not-allowed" : "opacity-100"
-          }`}
+          className={`icon icon-tabler icon-tabler-square-rounded-chevron-right-filled h-8 w-8 md:w-14 md:h-14 cursor-pointer ${indexAt == 5 ? "opacity-20 cursor-not-allowed" : "opacity-100"
+            }`}
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -93,102 +107,76 @@ export default function Projects({ data }: Props) {
                 <Image
                   width={400}
                   height={400}
-                  className="w-[300px] md:w-[400px] rounded-t-md object-contain cursor-grab"
+                  className="w-[300px] md:w-[400px] rounded-t-lg object-contain cursor-grab  transition-transform duration-200"
                   src={project.imgurl}
                   alt=""
                   priority={true}
                 />
 
-                <div className="px-8 w-[300px] md:w-[400px] py-7 font-outfit shadow-lg bg-slate-100/20 dark:bg-gray-700/30 backdrop-blur-sm md:text-left rounded-b-md space-y-4 cursor-grab">
-                  <h4 className="text-xl font-semibold md:text-2xl text-black dark:text-white">
+                <div className="px-8 w-[300px] md:w-[400px] py-7 font-outfit 
+                  shadow-xl hover:shadow-2xl transition-all duration-200
+                  bg-white/80 dark:bg-gray-800/90 backdrop-blur-md 
+                  md:text-left rounded-b-lg space-y-4 cursor-grab
+                  border border-gray-200 dark:border-gray-700"
+                >
+                  <h4 className="text-xl font-bold md:text-2xl text-black dark:text-white">
                     {project.title}
                   </h4>
 
-                  <div className="text-xs font-light dark:font-extralight space-x-4 md:mt-0 text-gray-700 dark:text-gray-200">
-                    <span className="cursor-pointer underline">
+                  <div className="flex space-x-4 text-sm font-medium dark:font-normal md:mt-0 text-gray-700 dark:text-gray-200">
+                    <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                       <a
                         href={project.githubLink}
                         target="_blank"
                         rel="noreferrer"
+                        className="flex items-center gap-1"
                       >
                         Github
+                        <span className="inline-flex">
+                          <svg
+                            className="with-icon_icon__MHUeb"
+                            data-testid="geist-icon"
+                            fill="none"
+                            height="24"
+                            shapeRendering="geometricPrecision"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            style={{
+                              color: "currentColor",
+                              width: "14px",
+                              height: "14px",
+                            }}
+                          >
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                          </svg>
+                        </span>
                       </a>
-
-                      <span className="inline-flex">
-                        <svg
-                          className="with-icon_icon__MHUeb"
-                          data-testid="geist-icon"
-                          fill="none"
-                          height="24"
-                          shapeRendering="geometricPrecision"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.5"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          style={{
-                            color: "currentColor",
-                            width: "14px",
-                            height: "14px",
-                          }}
-                        >
-                          <path d="M7 17L17 7"></path>
-                          <path d="M7 7h10v10"></path>
-                        </svg>
-                      </span>
-                    </span>
-
-                    <span className="cursor-pointer underline">
-                      <a
-                        href={project.deployedLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Live
-                      </a>
-                      <span className="inline-flex">
-                        <svg
-                          className="with-icon_icon__MHUeb"
-                          data-testid="geist-icon"
-                          fill="none"
-                          height="24"
-                          shapeRendering="geometricPrecision"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="1.5"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          style={{
-                            color: "currentColor",
-                            width: "14px",
-                            height: "14px",
-                          }}
-                        >
-                          <path d="M7 17L17 7"></path>
-                          <path d="M7 7h10v10"></path>
-                        </svg>
-                      </span>
                     </span>
                   </div>
 
-                  <p className="text-sm font-normal dark:font-light md:text-base mt-3 text-gray-800 dark:text-gray-100">
+                  <p className="text-sm leading-relaxed font-normal dark:font-light md:text-base text-gray-600 dark:text-gray-300">
                     {project.content}
                   </p>
 
-                  <div className="flex gap-2 mt-2 font-normal dark:font-light text-sm items-center text-gray-700 dark:text-gray-400">
-                    <span>tech stack used:</span>
-                    {project.tech?.map((tech: any, i: any) => (
-                      <Image
-                        key={i}
-                        width={20}
-                        height={20}
-                        src={tech.tech}
-                        alt=""
-                        className="w-5 h-5 rounded-sm object-contain"
-                      />
-                    ))}
+                  <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Tech:</span>
+                    <div className="flex gap-3 flex-wrap">
+                      {project.tech?.map((tech: any, i: any) => (
+                        <Image
+                          key={i}
+                          width={24}
+                          height={24}
+                          src={tech.tech}
+                          alt=""
+                          className="w-6 h-6 rounded-sm object-contain hover:scale-110 transition-transform"
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,8 +184,6 @@ export default function Projects({ data }: Props) {
           ))}
         </Swiper>
       </div>
-
-      <div className="w-full absolute top-[27%] bg-gradient-to-r from-blue-500 opacity-70 dark:opacity-30 left-0 h-[500px] -skew-y-12"></div>
-    </div>
+    </motion.div>
   );
 }

@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 export default function DarkModeToggle() {
   function applyThemeFromLocalStorage() {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
+    if (storedTheme === "light") {
       document.documentElement.classList.remove("dark");
+    } else {
+      // Default to dark theme
+      document.documentElement.classList.add("dark");
     }
   }
 
@@ -16,12 +17,12 @@ export default function DarkModeToggle() {
     applyThemeFromLocalStorage();
   }, []);
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     // Check if dark mode is enabled and update the state
     const storedTheme = localStorage.getItem("theme");
-    setIsDarkMode(storedTheme === "dark");
+    setIsDarkMode(storedTheme === "light" ? false : true);
   }, []);
 
   const toggleDarkMode = () => {

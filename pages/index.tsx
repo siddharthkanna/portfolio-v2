@@ -1,3 +1,4 @@
+import React from "react";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
@@ -39,10 +40,10 @@ export default function Home({ data }: any) {
       </section>
 
       {/* Experience */}
-      {/* <section id="skills" className="snap-center">
+      <section id="skills" className="snap-center">
         <Experience />
-      </section> 
-  */}
+      </section>
+
 
       {/* Projects */}
       <section id="projects" className="snap-center">

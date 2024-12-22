@@ -5,14 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .heroButton {
-    @apply text-sm backdrop-blur-sm bg-gray-300/30 text-black dark:bg-gray-700/40 dark:text-white dark:border-gray-400/10 mr-3 mt-3 py-2 px-5 md:px-7 rounded-full hover:duration-1000 font-normal;
+    @apply px-6 py-2 text-sm font-medium text-gray-700 dark:text-gray-300
+    bg-white/80 dark:bg-neutral-800/50 
+    border border-gray-200/60 dark:border-neutral-700/50
+    backdrop-blur-sm rounded-full
+    hover:text-gray-900 dark:hover:text-white
+    hover:border-gray-300 dark:hover:border-neutral-600
+    hover:bg-gray-50/80 dark:hover:bg-neutral-700/50
+    transition-all duration-300 ease-in-out
+    hover:scale-105 shadow-sm hover:shadow-md;
   }
+  
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-md px-3 py-2 text-gray-400 focus:text-white;
   }
+  
   .contactButton {
     @apply bg-transparent text-gray-400 border border-[#454545] font-bold py-2 px-5 rounded-md hover:text-white hover:border-[white] hover:duration-1000;
   }

@@ -4,16 +4,25 @@ import ExperienceCard from "./ExperienceCard";
 
 type Props = {};
 
-export default function Experience({}: Props) {
+export default function Experience({ }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      viewport={{ once: true }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl md:px-10 justify-evenly mx-auto items-center"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+      }}
+      viewport={{
+        once: false,
+      }}
+      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-6 justify-evenly mx-auto items-center"
     >
-      <h3 className="absolute top-32 uppercase tracking-[20px] text-gray-400 text-2xl pl-6">
+      <h3 className="absolute top-32 uppercase tracking-[20px] text-gray-700 dark:text-gray-400 text-2xl font-outfit">
         Experience
       </h3>
 
@@ -21,19 +30,19 @@ export default function Experience({}: Props) {
         <ExperienceCard
           clogo="/companyLogo/sump.jpg"
           title="Software engineer Intern"
-          company="at, Sumpositive services pvt ltd."
-          point1=""
-          point2=""
+          company="Sumpositive services pvt ltd."
+          point1="Organised Several hackathons and coding contests."
+          point2="Developed club's official website."
           startDate="Oct, 2023"
-          endDate="Present"
+          endDate="feb, 2023"
         />
         <ExperienceCard
           clogo="/companyLogo/scope.png"
-          title="Technical Team member"
-          company="SCOPE Club"
+          title="Software Engineer"
+          company="Mitt Arv"
           point1="Organised Several hackathons and coding contests."
           point2="Developed club's official website."
-          startDate="Jan, 2022"
+          startDate="Mar, 2023"
           endDate="Present"
         />
       </div>

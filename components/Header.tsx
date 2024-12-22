@@ -6,7 +6,9 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="sticky top-0 py-3 -mx-6 md:p-3 flex items-start justify-around md:mx-auto z-50 xl:items-center backdrop-blur-sm bg-slate-300/30 dark:bg-slate-800/40 ">
+    <header className="sticky top-0 py-4 -mx-6 md:p-4 flex items-start justify-around md:mx-auto z-50 xl:items-center 
+      backdrop-blur-md bg-gradient-to-r from-white/80 to-gray-100/70 dark:from-neutral-900/50 dark:to-neutral-800/30 
+      border-b border-gray-200/20 dark:border-gray-700/30">
       <motion.div
         initial={{
           x: -500,
@@ -24,17 +26,17 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row items-center"
       >
-        <ul className="flex justify-center my-3 space-x-4">
+        <ul className="flex justify-center my-3 space-x-6">
           <li>
             <a
               href="#hero"
-              className="text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-all duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6"
+                className="w-7 h-7 hover:scale-110 transition-transform duration-300"
               >
                 <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
@@ -44,10 +46,10 @@ export default function Header({}: Props) {
           <li>
             <a
               href="https://twitter.com/itssid07"
-              className="text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              className="text-gray-700 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7 hover:scale-110 transition-transform duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -59,10 +61,10 @@ export default function Header({}: Props) {
           <li>
             <a
               href="https://github.com/siddharthkanna"
-              className="text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-all duration-300"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7 hover:scale-110 transition-transform duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -78,10 +80,10 @@ export default function Header({}: Props) {
           <li>
             <a
               href="https://www.linkedin.com/in/siddharth-kanna-823bb5219/"
-              className="text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              className="text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7 hover:scale-110 transition-transform duration-300"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
                 fill="currentColor"
@@ -90,7 +92,7 @@ export default function Header({}: Props) {
               </svg>
             </a>
           </li>
-          <li className="text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+          <li className="text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-all duration-300">
             <DarkModeToggle />
           </li>
         </ul>
@@ -111,21 +113,44 @@ export default function Header({}: Props) {
           duration: 1.5,
           type: "tween",
         }}
-        className="flex flex-row items-center text-gray-800 hover:text-gray-900 dark:hover:text-white dark:text-gray-400 cursor-pointer space-x-2 pt-2 xl:pt-0"
+        className="flex flex-row items-center text-gray-700 space-x-6 pt-2 xl:pt-0"
       >
-        <a href="#contact" className="inline-flex items-center gap-2">
+        <a 
+          href="#contact" 
+          className="inline-flex items-center gap-2 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer group transition-all duration-300"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6"
+            className="w-7 h-7 group-hover:scale-110 transition-transform duration-300"
           >
             <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
             <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
           </svg>
 
-          <p className="hidden md:inline-flex text-sm">
-            <span>Get in touch</span>
+          <p className="hidden md:inline-flex text-sm font-medium font-outfit">
+            Get in touch
+          </p>
+        </a>
+
+        <a 
+          href="YOUR_CV_LINK_HERE" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="inline-flex items-center gap-2 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white cursor-pointer group transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-7 h-7 group-hover:scale-110 transition-transform duration-300"
+          >
+            <path d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625z" />
+            <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z" />
+          </svg>
+          <p className="hidden md:inline-flex text-sm font-medium font-outfit">
+            View my CV
           </p>
         </a>
       </motion.div>

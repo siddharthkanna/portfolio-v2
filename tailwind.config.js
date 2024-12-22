@@ -10,6 +10,10 @@ module.exports = {
         outfit: ["Outfit", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      screens: {
+        'xs': '375px',
+        // ... other breakpoints
+      },
     },
   },
   plugins: [
