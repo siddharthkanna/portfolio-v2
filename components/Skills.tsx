@@ -44,10 +44,10 @@ function Skills({}: Props) {
               <TechStackButton name="Docker" icon="bg-blue-600/90 hover:bg-blue-500 text-white" />
             </div>
           </div>
-
+{/* 
           <div className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-300">
             <IconCloudDemo />
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>
