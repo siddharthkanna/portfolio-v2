@@ -40,8 +40,8 @@ export default function Experience({ }: Props) {
           clogo="/companyLogo/scope.png"
           title="Software Engineer"
           company="Mitt Arv"
-          point1="Organised Several hackathons and coding contests."
-          point2="Developed club's official website."
+          point1="Worked on internal Tools"
+          point2="Developed features and fixed several bugs."
           startDate="Mar, 2023"
           endDate="Present"
         />
